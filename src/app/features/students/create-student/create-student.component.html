@@ -1,11 +1,12 @@
 <h2 class="mb-4 mt-5 text-center">New student</h2>
 
-<form class="w-50 mx-auto">
+<form (ngSubmit)="onSubmit()" class="w-50 mx-auto">
     <div class="form-group">
         <label>Name</label>
         <input type="text"
                class="form-control"
                name="name"
+               [(ngModel)]="student.name"
                placeholder="Enter the student name..."
                required>
     </div>
@@ -15,6 +16,7 @@
         <input type="email"
                class="form-control"
                name="email"
+               [(ngModel)]="student.email"
                placeholder="Enter the student e-mail..."
                email
                required>
@@ -25,6 +27,7 @@
         <input type="date"
                class="form-control"
                name="birthday"
+               [(ngModel)]="student.birthday"
                required>
     </div>
 

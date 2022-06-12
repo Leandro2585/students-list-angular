@@ -19,18 +19,18 @@
         </thead>
         <tbody>
             <tr>
-                <td colspan="5">No records found</td>
+                <td *ngIf="!students.length" colspan="5">No records found</td>
             </tr>
-            <tr >
-                <td>student.name</td>
-                <td>student.email</td>
-                <td>student.birthday | age</td>
-                <td>student.birthday | date:'dd/MM/yyy'</td>
+            <tr *ngFor="let student of students">
+                <td>{{ student.name }}</td>
+                <td>{{ student.email }}</td>
+                <td>29</td>
+                <td>{{ student.birthday }}</td>
                 <td>
-                    <a class="btn btn-sm btn-outline-warning mx-1">
+                    <a [routerLink]="['/students', student.id]" class="btn btn-sm btn-outline-warning mx-1">
                         <i class="fa fa-fw fa-pencil-alt"></i>
                     </a>
-                    <button type="button" class="btn btn-sm btn-outline-danger mx-1">
+                    <button type="button" class="btn btn-sm btn-outline-danger mx-1" (click)="onDelete(student.id)">
                         <i class="fa fa-fw fa-trash-alt"></i>
                     </button>
                 </td>

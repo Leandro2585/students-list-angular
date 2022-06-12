@@ -9,7 +9,7 @@
                placeholder="Enter the student name..."
                required>
     </div>
-
+    <br/>
     <div class="form-group">
         <label>E-mail</label>
         <input type="email"
@@ -19,6 +19,7 @@
                email
                required>
     </div>
+    <br/>
 
     <div class="form-group">
         <label>Birthday</label>
@@ -27,13 +28,12 @@
                name="birthday"
                required>
     </div>
+    <br/>
 
     <div class="form-row">
-        <div class="col-sm-6">
+        <div class="col-sm-6 d-flex">
             <a routerLink="/students" class="btn btn-block btn-outline-light">Back</a>
-        </div>
-        <div class="col-sm-6">
-            <button type="submit" class="btn btn-block btn-outline-success">Update</button>
+            <button type="submit" class="mx-4 btn btn-block btn-outline-success">Update</button>
         </div>
     </div>
 </form>
